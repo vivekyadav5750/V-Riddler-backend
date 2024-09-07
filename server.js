@@ -12,6 +12,10 @@ server.use(express.urlencoded({ extended: true }));
 //Parse JSON
 server.use(express.json());
 
+server.get("/", (req, res) => {
+  res.send("Server is Running");
+});
+
 //Routes
 server.use("/api", router);
 
